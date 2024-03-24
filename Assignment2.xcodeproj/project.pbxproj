@@ -52,6 +52,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1AEFFA992BB0D77D008707B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1AEFFA6D2BB091E4008707B3 /* CurrencyItem.swift */,
+				1AEFFA6F2BB09D15008707B3 /* ConvertModel.swift */,
+				1AEFFA712BB09F14008707B3 /* CurrencyConverterViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AC8A639929B59BEC00C32694 = {
 			isa = PBXGroup;
 			children = (
@@ -73,9 +83,7 @@
 			children = (
 				AC8A63A529B59BEC00C32694 /* Assignment2App.swift */,
 				1AEFFA782BB0BA31008707B3 /* Views */,
-				1AEFFA6F2BB09D15008707B3 /* ConvertModel.swift */,
-				1AEFFA712BB09F14008707B3 /* CurrencyConverterViewModel.swift */,
-				1AEFFA6D2BB091E4008707B3 /* CurrencyItem.swift */,
+				1AEFFA992BB0D77D008707B3 /* Model */,
 				AC8A63A929B59BED00C32694 /* Assets.xcassets */,
 				AC8A63AB29B59BED00C32694 /* Preview Content */,
 			);

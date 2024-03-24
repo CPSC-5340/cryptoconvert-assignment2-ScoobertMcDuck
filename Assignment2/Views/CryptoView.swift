@@ -10,20 +10,21 @@ import SwiftUI
 
 struct CryptoView: View {
     @State private var amount = 1
-
+    @FocusState private var isFocused: Bool
     
     var body: some View {
-        var amountDollar = Double(amount) * 66306.80
-        var amountETH = Double(amount) * 19.41
-        var amountT = Double(amount) * 66306.80
-        var amountBNB = Double(amount) * 116.95
-        var amountCoin = Double(amount) * 104990.09
-        var amountXRP = Double(amount) * 66306.80
+        let amountDollar = Double(amount) * 66306.80
+        let amountETH = Double(amount) * 19.41
+        let amountT = Double(amount) * 66306.80
+        let amountBNB = Double(amount) * 116.95
+        let amountCoin = Double(amount) * 104990.09
+        let amountXRP = Double(amount) * 66306.80
         VStack {
             HStack {
 
                 Text("Bitcoin")
                 TextField("Amount", value: $amount, format: .number )
+                    .focused($isFocused)
                     .textFieldStyle(.roundedBorder)
                     .keyboardType(.phonePad)
             }
@@ -60,6 +61,9 @@ struct CryptoView: View {
                     Text(String(format: "%0.2f", amountXRP))
                 }
             }
+        }
+        .onTapGesture {
+            isFocused = false;
         }
     }
 }

@@ -12,8 +12,8 @@ struct Converter: View {
     @ObservedObject var viewModel = CurrencyConverterViewModel()
     var body: some View {
         ScrollView {
-            Text("1 USD Exchange Rate")
             Spacer()
+            Text("1 USD Exchange Rate")
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
                 ForEach(viewModel.listOfCards) { card in
                     CurrencyItem(card: card)
